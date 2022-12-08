@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="../tabs/tab1">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="img1">
+  <ion-card>
+    <h3>WELCOME</h3>
+    <form [formGroup]="formLogin">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" placeholder="Insira o Email"></ion-input>
+        <ng-container *ngFor="let erro of mensagens.email">
+          <span class="msg-erro"
+            *ngIf="formLogin.get('email').hasError(erro.tipo) && (formLogin.get('email').dirty || formLogin.get('email').touched)">
+            {{erro.mensagem}}
+          </span>
+        </ng-container>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="senha" placeholder="Insira a Senha" type="password"></ion-input>
+      </ion-item>
+      <ng-container *ngFor="let erro of mensagens.senha">
+        <span class="msg-erro"
+          *ngIf="formLogin.get('senha').hasError(erro.tipo) && (formLogin.get('senha').dirty || formLogin.get('senha').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </form>
+    <div class="password">
+      <ion-button class="b1">Forgot your password?</ion-button>
+    </div>
+    <div class="botoes">
+      <ion-button class="ion-text-center botao1" (click)="salvarLogin()">Log-In</ion-button>
+      <ion-button class="b2" routerLink="/register">Register</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+ion-toolbar{
+  --background: transparent;
+  --color: white;
+}
+
+h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+ion-button{
+  --background: transparent;
+  --color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+ion-card{
+  --background: rgba(0, 0, 0, 0.555);
+  padding: 15px;
+  --color: white;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  ion-label{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" routerLink="/login">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="img2">
+  <p>Create an account?</p>
+  <form [formGroup]="formRegister">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="nome" type="name"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.nome">
+        <span class="msg-erro"
+          *ngIf="formRegister.get('nome').hasError(erro.tipo) && (formRegister.get('nome').dirty || formRegister.get('nome').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Cpf</ion-label>
+      <ion-input formControlName="cpf" placeholder="Enter text"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.cpf">
+        <span class="msg-erro"
+          *ngIf="formRegister.get('cpf').hasError(erro.tipo) && (formRegister.get('cpf').dirty || formRegister.get('cpf').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">
+        <ion-icon name="person"></ion-icon> Email
+      </ion-label>
+      <ion-input formControlName="email" type="email" ngModel email></ion-input>
+      <ng-container *ngFor="let erro of mensagens.email">
+        <span class="msg-erro"
+          *ngIf="formRegister.get('email').hasError(erro.tipo) && (formRegister.get('email').dirty || formRegister.get('email').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">
+        <ion-icon name="key"></ion-icon> Password
+      </ion-label>
+      <ion-input formControlName="senha" placeholder="Enter text" type="password"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.senha">
+        <span class="msg-erro"
+          *ngIf="formRegister.get('senha').hasError(erro.tipo) && (formRegister.get('senha').dirty || formRegister.get('senha').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm password</ion-label>
+      <ion-input formControlName="confirmaSenha" placeholder="Enter text" type="password"></ion-input>
+      <ng-container *ngFor="let erro of mensagens.confirmaSenha">
+        <span class="msg-erro"
+          *ngIf="formRegister.get('confirmaSenha').hasError(erro.tipo) && (formRegister.get('confirmaSenha').dirty || formRegister.get('confirmaSenha').touched)">
+          {{erro.mensagem}}
+        </span>
+      </ng-container>
+    </ion-item>
+
+  </form>
+  <div class="botao">
+    <ion-button fill="outline" color="white" (click)="salvarRegister()">To Save</ion-button>
+    <ion-button fill="outline" color="white" routerLink="../tabs/tab1">come back</ion-button>
+  </div>
+</ion-content>

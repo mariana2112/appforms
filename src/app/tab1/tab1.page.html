@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Users </ion-title>
+    <ion-buttons slot="end" routerLink="/login">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="imgtab1">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="white">Have an account?</ion-card-title>
+    </ion-card-header>
+    <ion-buttons routerLink="/register">
+      <ion-icon name="arrow-forward"> </ion-icon>
+      <ion-label> Register </ion-label>
+    </ion-buttons>
+    <ion-card-header>
+      <ion-card-title color="white">Buy something</ion-card-title>
+    </ion-card-header>
+    <ion-buttons routerLink="/cadastro">
+      <ion-icon name="arrow-forward"> </ion-icon>
+      <ion-label> Products </ion-label>
+    </ion-buttons>
+  </ion-card>
+</ion-content>

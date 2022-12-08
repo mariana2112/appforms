@@ -1,0 +1,11 @@
+ion-toolbar{
+  --background: transparent;
+  --color: white;
+  ion-title{
+    text-align: center;
+  }
+}
+ion-item{
+  --background: rgba(0, 0, 0, 0.555);
+  --color: white;
+}

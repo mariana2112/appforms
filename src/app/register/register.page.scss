@@ -1,0 +1,61 @@
+ion-toolbar{
+  --background: transparent;
+  --color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    color: #777;
+  }
+
+  span {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.7px;
+    color: #777;
+
+    a {
+      font-size: 0.7rem;
+      color: #999;
+      text-decoration: underline;
+    }
+  }
+
+  ion-card {
+    --background: rgba(255, 255, 255, 0.8);
+  }
+
+  ion-item {
+    --background: transparent;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    --color: white;
+  }
+
+  p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+  }
+
+  .botao{
+    text-align: center;
+    margin-top: 25px;
+    ion-button{
+      --background: transparent;
+      font-size: 13px;
+      --color:white;
+    }
+  }
+  .msg-erro{
+    color: #e43c3c;
+    font-size: 14px;
+    clear: both;
+    position:relative;
+  }
